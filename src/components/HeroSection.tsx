@@ -1,19 +1,20 @@
 import { FC, useState } from "react";
+import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight, Smartphone, Laptop, Cpu, Gamepad2, WashingMachine, Tv, TreePine, Camera, Star } from "lucide-react";
 import heroLaptop from "@/assets/hero-laptop.jpg";
 import heroPhone from "@/assets/hero-phone.jpg";
 import heroVR from "@/assets/hero-vr.jpg";
 import hotDealSpeakers from "@/assets/hot-deal-speakers.jpg";
 
-const categories = [
-  { name: "Smartphones", icon: Smartphone },
-  { name: "Laptops, Tablets & PCs", icon: Laptop },
-  { name: "PC Components", icon: Cpu },
-  { name: "Gaming", icon: Gamepad2 },
-  { name: "Appliances", icon: WashingMachine },
-  { name: "TV & Audio", icon: Tv },
-  { name: "Home & Outdoor", icon: TreePine },
-  { name: "Cameras", icon: Camera },
+const categoriesData = [
+  { name: "Smartphones", icon: Smartphone, slug: "smartphones" },
+  { name: "Laptops, Tablets & PCs", icon: Laptop, slug: "laptops-tablets" },
+  { name: "PC Components", icon: Cpu, slug: "pc-components" },
+  { name: "Gaming", icon: Gamepad2, slug: "gaming" },
+  { name: "Appliances", icon: WashingMachine, slug: "appliances" },
+  { name: "TV & Audio", icon: Tv, slug: "tv-audio" },
+  { name: "Home & Outdoor", icon: TreePine, slug: "home-outdoor" },
+  { name: "Cameras", icon: Camera, slug: "cameras" },
 ];
 
 const slides = [
@@ -22,18 +23,21 @@ const slides = [
     subtitle: "Gorgeous at every angle",
     tab: "Surface Laptop",
     image: heroLaptop,
+    link: "/category/laptops-tablets",
   },
   {
     title: "Galaxy Fold7 | Flip7",
     subtitle: "Unlock Ultra capabilities",
     tab: "Galaxy Fold7 | Flip7",
     image: heroPhone,
+    link: "/category/smartphones",
   },
   {
     title: "Mixed Reality with Meta Quest 3",
     subtitle: "Step into a new dimension",
     tab: "Meta Quest 3",
     image: heroVR,
+    link: "/category/gaming",
   },
 ];
 
@@ -49,15 +53,15 @@ const HeroSection: FC = () => {
         {/* Categories Sidebar */}
         <div className="hidden lg:block bg-background border border-border rounded-xl p-4">
           <nav className="space-y-0.5">
-            {categories.map((cat) => (
-              <a
+            {categoriesData.map((cat) => (
+              <Link
                 key={cat.name}
-                href="#"
+                to={`/category/${cat.slug}`}
                 className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-foreground hover:bg-secondary transition-colors"
               >
                 <cat.icon size={18} className="text-muted-foreground" />
                 {cat.name}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>
@@ -84,12 +88,12 @@ const HeroSection: FC = () => {
                 <p className="text-muted-foreground text-base md:text-lg mb-6">
                   {slide.subtitle}
                 </p>
-                <a
-                  href="#"
+                <Link
+                  to={slide.link}
                   className="inline-flex items-center bg-foreground text-background px-6 py-3 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
                 >
                   Buy Now
-                </a>
+                </Link>
               </div>
             </div>
           ))}
@@ -142,9 +146,9 @@ const HeroSection: FC = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent flex flex-col items-center justify-end pb-6">
               <p className="text-xs text-muted-foreground mb-1">Audioengine A2+BT</p>
               <p className="font-bold text-foreground text-sm">Only today, 25% discount</p>
-              <a href="#" className="inline-block mt-3 text-xs font-medium border border-foreground text-foreground px-4 py-2 rounded-lg hover:bg-foreground hover:text-background transition-colors bg-background/50 backdrop-blur-sm">
+              <Link to="/category/tv-audio" className="inline-block mt-3 text-xs font-medium border border-foreground text-foreground px-4 py-2 rounded-lg hover:bg-foreground hover:text-background transition-colors bg-background/50 backdrop-blur-sm">
                 Buy Now
-              </a>
+              </Link>
             </div>
           </div>
 
