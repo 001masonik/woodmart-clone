@@ -46,9 +46,9 @@ const Index = () => (
     <HeroSection />
     <BrandBar />
     <BestsellersSection />
-    <PopularSection title="Appliances" products={applianceProducts} />
+    <PopularSection title="Appliances" categorySlug="appliances" products={applianceProducts} />
     <LimitedOffersSection />
-    <PopularSection title="Gaming" products={gamingProducts} />
+    <PopularSection title="Gaming" categorySlug="gaming" products={gamingProducts} />
     <PromoBanners />
     <BlogSection />
     <FooterSection />
