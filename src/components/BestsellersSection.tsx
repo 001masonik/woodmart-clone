@@ -47,6 +47,9 @@ const BestsellersSection: FC = () => {
             oldPrice={product.oldPrice}
             rating={product.rating}
             badge={product.badge}
+            image={product.image}
+            hoverImage={product.hoverImage}
+            colors={product.colors}
           />
         ))}
       </div>
