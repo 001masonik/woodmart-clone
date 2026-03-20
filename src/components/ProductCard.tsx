@@ -90,6 +90,8 @@ const ProductCard: FC<ProductCardProps> = ({ name, category, price, oldPrice, ra
           ))}
         </div>
       )}
+    </div>
+  </div>
 );
 
 export default ProductCard;
