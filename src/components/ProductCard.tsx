@@ -78,8 +78,18 @@ const ProductCard: FC<ProductCardProps> = ({ name, category, price, oldPrice, ra
           <p className="text-xs text-muted-foreground line-through">{oldPrice}</p>
         )}
       </div>
-    </div>
-  </div>
+      {colors && colors.length > 0 && (
+        <div className="flex items-center gap-1 mt-2">
+          {colors.map((c) => (
+            <span
+              key={c}
+              className="w-4 h-4 rounded-full border border-border"
+              style={{ backgroundColor: COLOR_HEX[c] || "#ccc" }}
+              title={c}
+            />
+          ))}
+        </div>
+      )}
 );
 
 export default ProductCard;
