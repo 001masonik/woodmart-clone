@@ -6,10 +6,16 @@ export interface Product {
   price: string;
   priceNum: number;
   oldPrice?: string;
+  oldPriceNum?: number;
   rating: number;
   badge?: "hot" | "sale" | null;
   colors?: string[];
+  storageOptions?: string[];
   brand?: string;
+  image: string;
+  hoverImage?: string;
+  popularity?: number;
+  dateAdded?: string;
 }
 
 export interface Category {
