@@ -9,14 +9,28 @@ interface ProductCardProps {
   rating: number;
   badge?: "hot" | "sale" | null;
   image?: string;
+  hoverImage?: string;
+  colors?: string[];
 }
 
-const ProductCard: FC<ProductCardProps> = ({ name, category, price, oldPrice, rating, badge, image }) => (
+const COLOR_HEX: Record<string, string> = {
+  Black: "#000000", White: "#ffffff", Gray: "#808080", Blue: "#3b82f6",
+  Green: "#22c55e", Pink: "#ec4899", Yellow: "#eab308", Red: "#ef4444",
+  Purple: "#a855f7", Bronze: "#cd7f32", Gold: "#ffd700", Starlight: "#f5f0e8",
+  Orchid: "#da70d6",
+};
+
+const ProductCard: FC<ProductCardProps> = ({ name, category, price, oldPrice, rating, badge, image, hoverImage, colors }) => (
   <div className="group bg-background border border-border rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300">
     {/* Image */}
     <div className="relative aspect-[270/309] bg-hero-bg flex items-center justify-center overflow-hidden">
-      {image ? (
-        <img src={image} alt={name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+      {image && image !== "/placeholder.svg" ? (
+        <>
+          <img src={image} alt={name} className={`w-full h-full object-cover transition-opacity duration-300 ${hoverImage ? "group-hover:opacity-0" : "group-hover:scale-105 transition-transform duration-500"}`} />
+          {hoverImage && (
+            <img src={hoverImage} alt={name} className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          )}
+        </>
       ) : (
         <div className="w-full h-full bg-gradient-to-br from-secondary to-muted flex items-center justify-center">
           <span className="text-4xl opacity-30">📦</span>
@@ -64,6 +78,18 @@ const ProductCard: FC<ProductCardProps> = ({ name, category, price, oldPrice, ra
           <p className="text-xs text-muted-foreground line-through">{oldPrice}</p>
         )}
       </div>
+      {colors && colors.length > 0 && (
+        <div className="flex items-center gap-1 mt-2">
+          {colors.map((c) => (
+            <span
+              key={c}
+              className="w-4 h-4 rounded-full border border-border"
+              style={{ backgroundColor: COLOR_HEX[c] || "#ccc" }}
+              title={c}
+            />
+          ))}
+        </div>
+      )}
     </div>
   </div>
 );
