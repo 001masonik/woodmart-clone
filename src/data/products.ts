@@ -111,6 +111,7 @@ export const categories: Category[] = [
 ];
 
 export const allProducts: Product[] = [
+  // ===== SMARTPHONES CATEGORY (scraped from original WoodMart) =====
   // Smartphones
   { id: "iphone-15", name: "Apple iPhone 15", category: "smartphones", subcategory: "Smartphones", price: "$799.00", priceNum: 799, rating: 5, colors: ["Gray", "Green", "Pink", "White", "Yellow"], brand: "Apple" },
   { id: "iphone-15-plus", name: "Apple iPhone 15 Plus", category: "smartphones", subcategory: "Smartphones", price: "$899.00", priceNum: 899, rating: 5, colors: ["Gray", "Green", "Pink", "White", "Yellow"], brand: "Apple" },
@@ -124,15 +125,44 @@ export const allProducts: Product[] = [
   { id: "moto-edge", name: "Motorola Edge+ (2023)", category: "smartphones", subcategory: "Smartphones", price: "$617.45", priceNum: 617.45, rating: 4, brand: "Motorola" },
   { id: "moto-razr", name: "Motorola Moto Razr 40 Ultra", category: "smartphones", subcategory: "Smartphones", price: "$899.99", priceNum: 899.99, rating: 4, colors: ["Black", "Green", "Orchid"], brand: "Motorola" },
   { id: "nokia-g60", name: "Nokia G60 5G", category: "smartphones", subcategory: "Smartphones", price: "$378.00", priceNum: 378, rating: 5, colors: ["Black", "White"], brand: "Nokia" },
-  { id: "apple-clear-case", name: "Apple Clear Case", category: "smartphones", subcategory: "Covers for Phones", price: "$49.00", priceNum: 49, rating: 4, brand: "Apple" },
-  { id: "apple-finewoven", name: "Apple FineWoven Case", category: "smartphones", subcategory: "Covers for Phones", price: "$59.00", priceNum: 59, rating: 4, colors: ["Black", "Blue", "Pink", "White"], brand: "Apple" },
-  { id: "otterbox-figura", name: "OtterBox Figura Series Case", category: "smartphones", subcategory: "Covers for Phones", price: "$49.95", priceNum: 49.95, rating: 5, brand: "OtterBox" },
-  { id: "baseus-ring", name: "Baseus Privity Ring Bracket", category: "smartphones", subcategory: "Accessories", price: "$12.00", priceNum: 12, rating: 5, brand: "Baseus" },
-  { id: "belkin-glass", name: "Belkin Blue Light UltraGlass 2", category: "smartphones", subcategory: "Screen Protectors", price: "$44.99", priceNum: 44.99, rating: 5, brand: "Belkin" },
   { id: "poco-x9b", name: "Poco Honor X9b", category: "smartphones", subcategory: "Smartphones", price: "$350.00", priceNum: 350, rating: 5, brand: "Poco" },
+
+  // Covers for Phones
+  { id: "apple-clear-case", name: "Apple Clear Case", category: "smartphones", subcategory: "Covers for Phones", price: "$49.00", priceNum: 49, rating: 4, brand: "Apple" },
+  { id: "apple-finewoven", name: "Apple FineWoven Case", category: "smartphones", subcategory: "Covers for Phones", price: "$59.00", priceNum: 59, rating: 4, colors: ["Black", "Blue", "Gold", "Green"], brand: "Apple" },
+  { id: "apple-silicone-case", name: "Apple Silicone Case", category: "smartphones", subcategory: "Covers for Phones", price: "$49.00", priceNum: 49, rating: 0, colors: ["Black", "Bronze", "Purple"], brand: "Apple" },
+  { id: "otterbox-figura", name: "OtterBox Figura Series Case", category: "smartphones", subcategory: "Covers for Phones", price: "$49.95", priceNum: 49.95, rating: 5, brand: "OtterBox" },
+
+  // Car Holders
+  { id: "baseus-glaze-gravity", name: "Baseus Glaze Gravity Car", category: "smartphones", subcategory: "Car Holders", price: "$18.00", priceNum: 18, rating: 0, brand: "Baseus" },
+  { id: "baseus-smart-solar", name: "Baseus Smart Solar Power", category: "smartphones", subcategory: "Car Holders", price: "$32.00", priceNum: 32, rating: 0, brand: "Baseus" },
+
+  // Stand Holders
+  { id: "baseus-literary-youth", name: "Baseus Literary Youth", category: "smartphones", subcategory: "Stand Holders", price: "$15.50", priceNum: 15.5, rating: 0, brand: "Baseus" },
+  { id: "baseus-ring", name: "Baseus Privity Ring Bracket", category: "smartphones", subcategory: "Stand Holders", price: "$12.00", priceNum: 12, rating: 5, brand: "Baseus" },
+
+  // Power Banks
+  { id: "baseus-adaman", name: "Baseus Adaman Metal PD 65W 20000mAh", category: "smartphones", subcategory: "Power Banks", price: "$65.00", priceNum: 65, rating: 0, brand: "Baseus" },
+  { id: "baseus-bipow", name: "Baseus Bipow Digital Display 30000 mAh 20W", category: "smartphones", subcategory: "Power Banks", price: "$63.00", priceNum: 63, rating: 0, brand: "Baseus" },
+  { id: "baseus-bipow-pro", name: "Baseus Bipow Pro Digital Display 10000mAh 20W", category: "smartphones", subcategory: "Power Banks", price: "$45.00", priceNum: 45, rating: 0, brand: "Baseus" },
+  { id: "baseus-blade", name: "Baseus Blade Digital Display 100W 20000mAh", category: "smartphones", subcategory: "Power Banks", price: "$80.00", priceNum: 80, rating: 0, brand: "Baseus" },
+  { id: "baseus-elf", name: "Baseus Elf 10000mAh PD22.5W", category: "smartphones", subcategory: "Power Banks", price: "$38.00", priceNum: 38, rating: 0, brand: "Baseus" },
+  { id: "baseus-mini-s", name: "Baseus Mini S 10000mAh 15W", category: "smartphones", subcategory: "Power Banks", price: "$26.00", priceNum: 26, rating: 0, brand: "Baseus" },
+
+  // Mains Chargers
+  { id: "belkin-boostcharge-140w", name: "Belkin BoostCharge Pro 140W", category: "smartphones", subcategory: "Mains Chargers", price: "$129.99", priceNum: 129.99, rating: 0, brand: "Belkin" },
+
+  // Wireless Chargers
+  { id: "belkin-boostcharge-2in1", name: "Belkin BoostCharge Pro 2-in-1", category: "smartphones", subcategory: "Wireless Chargers", price: "$67.99", priceNum: 67.99, oldPrice: "$79.99", rating: 0, badge: "sale", brand: "Belkin" },
+  { id: "belkin-boostcharge-3in1", name: "Belkin BoostCharge Pro 3-in-1", category: "smartphones", subcategory: "Wireless Chargers", price: "$149.99", priceNum: 149.99, rating: 0, brand: "Belkin" },
+
+  // Screen Protectors
+  { id: "belkin-glass", name: "Belkin Blue Light UltraGlass 2", category: "smartphones", subcategory: "Screen Protectors", price: "$44.99", priceNum: 44.99, rating: 5, brand: "Belkin" },
+
+  // Memory Cards
   { id: "sandisk-endurance", name: "SanDisk MAX ENDURANCE", category: "smartphones", subcategory: "Memory Cards", price: "$32.00", priceNum: 32, rating: 5, brand: "SanDisk" },
 
-  // PC Components
+  // ===== PC COMPONENTS =====
   { id: "rog-b550", name: "ASUS ROG Strix B550-F Gaming", category: "pc-components", subcategory: "Motherboards", price: "$189.99", priceNum: 189.99, rating: 5, brand: "Asus" },
   { id: "ryzen-5800x", name: "AMD Ryzen 7 5800X Processor", category: "pc-components", subcategory: "Processors", price: "$299.00", priceNum: 299, rating: 5, badge: "hot", brand: "AMD" },
   { id: "corsair-vengeance", name: "Corsair Vengeance 32GB DDR5", category: "pc-components", subcategory: "Memory", price: "$119.99", priceNum: 119.99, rating: 4, brand: "Corsair" },
@@ -146,7 +176,7 @@ export const allProducts: Product[] = [
   { id: "msi-z790", name: "MSI MEG Z790 ACE", category: "pc-components", subcategory: "Motherboards", price: "$499.99", priceNum: 499.99, rating: 4, brand: "MSI" },
   { id: "evga-1000w", name: "EVGA SuperNOVA 1000W", category: "pc-components", subcategory: "Power Supplies", price: "$189.99", priceNum: 189.99, rating: 5, brand: "EVGA" },
 
-  // Appliances
+  // ===== APPLIANCES =====
   { id: "ariete-0979", name: "ARIETE 0979 Pizza Oven", category: "appliances", subcategory: "Ovens", price: "$110.00", priceNum: 110, rating: 5, brand: "Ariete" },
   { id: "ariete-986", name: "ARIETE 986 Vintage Oven", category: "appliances", subcategory: "Ovens", price: "$150.00", priceNum: 150, rating: 4, brand: "Ariete" },
   { id: "bamix-deluxe", name: "Bamix DeLuxe M200", category: "appliances", subcategory: "Blenders", price: "$230.00", priceNum: 230, rating: 4, brand: "Bamix" },
@@ -161,7 +191,7 @@ export const allProducts: Product[] = [
   { id: "bosch-ms64", name: "Bosch MS64M6170", category: "appliances", subcategory: "Blenders", price: "$100.00", priceNum: 100, rating: 4, brand: "Bosch" },
   { id: "bosch-wga", name: "Bosch WGA242X0ME", category: "appliances", subcategory: "Washing Machines", price: "$650.00", priceNum: 650, oldPrice: "$780.00", rating: 5, badge: "sale", brand: "Bosch" },
 
-  // Gaming
+  // ===== GAMING =====
   { id: "cobra-gt900", name: "Cobra Rally GT900", category: "gaming", subcategory: "Wheels", price: "$180.00", priceNum: 180, rating: 4, brand: "Cobra" },
   { id: "cyberpunk", name: "Cyberpunk 2077", category: "gaming", subcategory: "PC Games", price: "$60.00", priceNum: 60, rating: 5, brand: "CD Projekt" },
   { id: "dualsense", name: "DualSense Controller", category: "gaming", subcategory: "Gamepads", price: "$70.00", priceNum: 70, rating: 5, brand: "Sony" },
@@ -175,7 +205,7 @@ export const allProducts: Product[] = [
   { id: "fifa-23-pc", name: "FIFA 23 PC Edition", category: "gaming", subcategory: "PC Games", price: "$69.00", priceNum: 69, rating: 5, brand: "EA" },
   { id: "hogwarts-pc", name: "Hogwarts Legacy PC", category: "gaming", subcategory: "PC Games", price: "$69.00", priceNum: 69, rating: 5, brand: "WB" },
 
-  // TV & Audio
+  // ===== TV & AUDIO =====
   { id: "audioengine-a2bt", name: "Audioengine A2+BT", category: "tv-audio", subcategory: "Speakers", price: "$300.00", priceNum: 300, rating: 5, brand: "Audioengine" },
   { id: "sony-wh1000", name: "Sony WH-1000XM5", category: "tv-audio", subcategory: "Headphones", price: "$349.99", priceNum: 349.99, rating: 5, brand: "Sony" },
   { id: "bose-qc45", name: "Bose QuietComfort 45", category: "tv-audio", subcategory: "Headphones", price: "$329.00", priceNum: 329, rating: 5, brand: "Bose" },
@@ -183,7 +213,7 @@ export const allProducts: Product[] = [
   { id: "samsung-qn90b", name: "Samsung QN90B 55\" QLED", category: "tv-audio", subcategory: "Televisions", price: "$1,299.00", priceNum: 1299, rating: 5, brand: "Samsung" },
   { id: "lg-c3", name: "LG C3 55\" OLED", category: "tv-audio", subcategory: "Televisions", price: "$1,499.00", priceNum: 1499, rating: 5, brand: "LG" },
 
-  // Laptops
+  // ===== LAPTOPS & TABLETS =====
   { id: "macbook-pro-14", name: "Apple MacBook Pro 14\" M3", category: "laptops-tablets", subcategory: "Laptops", price: "$1,999.00", priceNum: 1999, rating: 5, brand: "Apple" },
   { id: "dell-xps-15", name: "Dell XPS 15", category: "laptops-tablets", subcategory: "Laptops", price: "$1,499.00", priceNum: 1499, rating: 5, brand: "Dell" },
   { id: "ipad-pro", name: "Apple iPad Pro 12.9\"", category: "laptops-tablets", subcategory: "Tablets", price: "$1,099.00", priceNum: 1099, rating: 5, brand: "Apple" },
@@ -191,13 +221,13 @@ export const allProducts: Product[] = [
   { id: "asus-zenbook", name: "ASUS ZenBook 14", category: "laptops-tablets", subcategory: "Laptops", price: "$899.00", priceNum: 899, rating: 4, brand: "Asus" },
   { id: "lenovo-thinkpad", name: "Lenovo ThinkPad X1 Carbon", category: "laptops-tablets", subcategory: "Laptops", price: "$1,649.00", priceNum: 1649, rating: 5, brand: "Lenovo" },
 
-  // Cameras
+  // ===== CAMERAS =====
   { id: "canon-r6", name: "Canon EOS R6 Mark II", category: "cameras", subcategory: "Mirrorless", price: "$2,499.00", priceNum: 2499, rating: 5, brand: "Canon" },
   { id: "sony-a7iv", name: "Sony A7 IV", category: "cameras", subcategory: "Mirrorless", price: "$2,498.00", priceNum: 2498, rating: 5, brand: "Sony" },
   { id: "gopro-12", name: "GoPro Hero 12 Black", category: "cameras", subcategory: "Action Cameras", price: "$399.99", priceNum: 399.99, rating: 5, brand: "GoPro" },
   { id: "sony-24-70", name: "Sony FE 24-70mm f/2.8 GM II", category: "cameras", subcategory: "Lenses", price: "$2,199.00", priceNum: 2199, rating: 5, brand: "Sony" },
 
-  // Home & Outdoor
+  // ===== HOME & OUTDOOR =====
   { id: "nest-hub", name: "Google Nest Hub Max", category: "home-outdoor", subcategory: "Smart Home", price: "$229.00", priceNum: 229, rating: 4, brand: "Google" },
   { id: "ring-doorbell", name: "Ring Video Doorbell 4", category: "home-outdoor", subcategory: "Security", price: "$199.99", priceNum: 199.99, rating: 5, brand: "Ring" },
   { id: "philips-hue", name: "Philips Hue Starter Kit", category: "home-outdoor", subcategory: "Lighting", price: "$199.99", priceNum: 199.99, rating: 5, brand: "Philips" },
